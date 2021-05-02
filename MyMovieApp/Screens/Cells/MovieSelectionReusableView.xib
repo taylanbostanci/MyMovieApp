@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="U6b-Vx-4bR" customClass="MovieSelectionReusableView" customModule="MyMovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ3-UV-IQx">
+                    <rect key="frame" x="0.0" y="10" width="347" height="35"/>
+                    <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YYy-Q0-83R">
+                    <rect key="frame" x="0.0" y="55" width="347" height="36"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmendControlTapped:" destination="U6b-Vx-4bR" eventType="valueChanged" id="QQN-6A-svk"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="YYy-Q0-83R" secondAttribute="trailing" id="02H-bp-3y7"/>
+                <constraint firstItem="uJ3-UV-IQx" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="G2B-w4-A3f"/>
+                <constraint firstAttribute="trailing" secondItem="uJ3-UV-IQx" secondAttribute="trailing" id="N39-eg-NrV"/>
+                <constraint firstItem="YYy-Q0-83R" firstAttribute="top" secondItem="uJ3-UV-IQx" secondAttribute="bottom" constant="10" id="Qv3-cC-Cl6"/>
+                <constraint firstItem="uJ3-UV-IQx" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="cTw-eQ-Tzd"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="YYy-Q0-83R" secondAttribute="bottom" constant="20" id="uWt-3T-aUL"/>
+                <constraint firstItem="YYy-Q0-83R" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="xPF-tu-swK"/>
+            </constraints>
+            <connections>
+                <outlet property="movieCategoryLabel" destination="uJ3-UV-IQx" id="nXB-Zb-yEs"/>
+                <outlet property="segmendControl" destination="YYy-Q0-83R" id="Bmc-h1-Y5q"/>
+            </connections>
+            <point key="canvasLocation" x="25.362318840579711" y="128.57142857142856"/>
+        </collectionReusableView>
+    </objects>
+</document>
